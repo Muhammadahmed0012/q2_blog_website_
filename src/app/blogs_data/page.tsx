@@ -13,12 +13,14 @@ interface Iblogs {
 export default async function Blogs_data() {
    const res:Iblogs[] = await client.fetch(`*[_type=='blogs']`)
 
+ console.log(res);
  
 
   return(
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center'>
       { 
     res.map((data)=>{
+
       
         return( 
           
